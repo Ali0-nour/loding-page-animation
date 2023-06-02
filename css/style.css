@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --color-mena: whitesmoke;
+    --font-color: salmon;
+    --color-p: rgba(236, 230, 230, 0.699);
+    --hover-color: rgb(231, 156, 69);
+}
+
+body {
+    overflow: auto;
+}
+
+.naver-page {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+
+.naver {
+    width: 95%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.titel-p p {
+    font-size: 2em;
+    color: var(--font-color);
+
+}
+
+.link li {
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.titel-p:hover p::before {
+    content: '   ';
+    color: var(--hover-color);
+    position: absolute;
+    top: 60px;
+    animation-name: title-p;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    transition: all 3s 20ms ease;
+    -webkit-transition: all 3s 20ms ease;
+    -moz-transition: all 3s 20ms ease;
+    -ms-transition: all 3s 20ms ease;
+    -o-transition: all 3s 20ms ease;
+}
+
+@keyframes title-p {
+    0% {}
+
+    20% {
+        border-bottom: 3px solid snow;
+        width: 20px;
+
+    }
+
+
+    100% {
+        border-bottom: 3px solid snow;
+        width: 100px;
+
+    }
+}
+
+.naver .link li {
+    list-style: none;
+    color: var(--color-mena);
+    display: inline-block;
+    margin: 0 10px;
+    padding-bottom: 10px;
+}
+
+.naver .link li:hover {
+    color: var(--hover-color);
+
+
+}
+
+ul:hover li:before {
+    content: '   ';
+    color: var(--hover-color);
+    position: absolute;
+    top: 50px;
+    animation-name: link;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+
+
+}
+
+@keyframes link {
+    0% {}
+
+
+
+    20% {
+        border-bottom: 2px solid snow;
+        width: 10px;
+    }
+
+
+
+    100% {
+        border-bottom: 2px solid snow;
+        width: 57px;
+
+    }
+}
+
+/* end naver  */
+
+
+/* start Home page  */
+.Home {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+
+.Home-content {
+    width: 100%;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    overflow: hidden;
+    background-color: darkslategrey;
+
+}
+
+.Home-content .titel-home {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0 10%;
+    font-size: 2.8em;
+    color: var(--color-mena);
+}
+
+.Home-content span::after {
+    content: ' !';
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    animation-name: span;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    transition: all 2s 0ms ease;
+    -webkit-transition: all 2s 0ms ease;
+    -moz-transition: all 2s 0ms ease;
+    -ms-transition: all 2s 0ms ease;
+    -o-transition: all 2s 0ms ease;
+    color: rgb(223, 59, 9);
+    font-size: 1.3em;
+}
+
+/* animation  */
+@keyframes span {
+    0% {}
+
+    50% {
+        color: rgba(240, 248, 255, 0);
+
+    }
+
+    100% {
+        color: rgb(223, 59, 9);
+    }
+}
+
+/* end animation */
+.Home-content p {
+    max-width: 600px;
+    height: fit-content;
+    margin-left: 10%;
+    color: var(--color-p);
+    line-height: 1.6;
+    text-align: start;
+}
+
+.Home-content input {
+    width: 200px;
+    height: 50px;
+    background-color: var(--font-color);
+    color: var(--color-mena);
+    line-height: 1.6;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    margin: 20px 10%;
+    font-size: 15px;
+}
+
+.Home-content input:hover {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(17, 86, 95);
+    color: var(--hover-color);
+
+}
+
+.Home-img {
+    position: absolute;
+    top: 20%;
+    left: 60%;
+    animation-name: phone;
+    animation-duration: 9s;
+    animation-timing-function: ease-in-out;
+    /* animation-fill-mode: both; */
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;
+    transition: all 9s 20ms ease;
+    -webkit-transition: all 9s 20ms ease;
+    -moz-transition: all 9s 20ms ease;
+    -ms-transition: all 9s 20ms ease;
+    -o-transition: all 9s 20ms ease;
+
+}
+
+
+.Home-img img:not(img:first-of-type) {
+    position: absolute;
+    top: 4%;
+    left: 34%;
+
+}
+
+/* animation  */
+
+@keyframes phone {
+    0% {}
+
+    50% {
+        top: 23%;
+        left: 55%;
+    }
+
+    100% {
+        top: 20%;
+        left: 60%;
+    }
+}
+
+/* start medio  */
+/* large  */
+@media (max-width:1200px) {
+
+    .Home-img img {
+        width: 0;
+        height: 0;
+
+    }
+}
+
+/* small  */
+@media (max-width:650px) {
+
+    /* start nav  */
+
+    .naver-phone div {
+        width: 30px;
+        height: 5px;
+        margin-bottom: 2px;
+        background-color: black;
+    }
+
+    .naver-phone {
+
+        background-color: rgb(190, 65, 65);
+    }
+
+    .link {
+        max-width: fit-content;
+        height: 300px;
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: darkgray;
+        right: 10%;
+        top: 10%;
+        padding: 0 20px;
+    }
+
+    .naver-phone:hover .link {
+        display: flex;
+    }
+
+    /* start Home  */
+    .Home-img img {
+        width: 0;
+        height: 0;
+
+    }
+
+    .Home-content .titel-home {
+        width: 100%;
+        height: 200px;
+        font-size: 2em;
+
+    }
+
+    .Home-content p {
+        max-width: 100%;
+        height: fit-content;
+        margin-left: 10%;
+        color: var(--color-p);
+        line-height: 1.6;
+        text-align: start;
+    }
+
+    /* end home  */
+}
+
+
+
+/* end media  */
